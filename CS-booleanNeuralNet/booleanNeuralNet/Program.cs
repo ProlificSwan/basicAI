@@ -31,7 +31,7 @@ namespace booleanNeuralNet
         inputs[0] = rand.Next() % 2;
         inputs[1] = rand.Next() % 2;
         inputs[2] = 1; //bias
-        answer = (inputs[0] | inputs[1]); //current can only do & and |. XOR(^) does not work as it is not linearly separable
+        answer = (inputs[0] & inputs[1]); //current can only do & and |. XOR(^) does not work as it is not linearly separable
         result = perc.FeedForward(inputs);
         if (result == answer)
         {
